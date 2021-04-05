@@ -1,0 +1,144 @@
+set_great_works_model = {
+	trigger_switch = {
+		on_trigger = has_wonder
+
+		wonder_pyramid_giza = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = mapobject_11 #Hide with tree
+			}
+		}
+		wonder_pagan_stones_stonehenge = {
+			if = {
+				limit = { has_dlc = "Holy Fury" }
+				set_wonder_model = gold_mine
+			}
+			else = {
+				set_wonder_model = wonder_tree
+			}
+		}
+		wonder_mausoleum_halicarnassus = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_khajuraho
+			}
+			else = {
+				set_wonder_model = wonder_statue
+			}
+		}
+		wonder_temple_hindu_konark = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_khajuraho
+			}
+		}
+		wonder_apostolic_palace = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_palace_of_aachen
+			}
+		}
+		wonder_underground_city_petra = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = mapobject_11 #Hide with tree
+			}
+		}
+		wonder_cathedral = {
+			if = {
+				limit = {
+					wonder_owner = {
+						OR = {
+							religion = catholic
+							is_heresy_of = catholic
+							is_parent_religion = catholic
+						}
+					}
+				}
+				set_wonder_model = wonder_cathedral
+			}
+			else_if = {
+				limit = {
+					wonder_owner = {
+						religion_group = christian
+						NOR = {
+							religion = catholic
+							is_heresy_of = catholic
+							is_parent_religion = catholic
+						}
+					}
+				}
+				set_wonder_model = wonder_hagia_sophia
+			}
+		}
+		wonder_synagogue = {
+			set_wonder_model = wonder_hagia_sophia
+		}
+		wonder_temple_buddhist = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_khajuraho
+			}
+		}
+		wonder_temple_hindu = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_khajuraho
+			}
+		}
+		wonder_statue_horse = {
+			set_wonder_model = wonder_statue
+		}
+		wonder_fortress = {
+			set_wonder_model = wonder_fortress
+		}
+		#wonder_underground_city = { #show_model = no disables this.
+		#	if = {
+		#		limit = { has_dlc = "Conclave" } # Content Pack
+		#		set_wonder_model = cote_petra
+		#	}
+		#}
+		#wonder_wall = { #show_model = no disables this.
+		#	if = {
+		#		limit = { has_dlc = "Conclave" } # Content Pack
+		#		set_wonder_model = cote_hadrianswall
+		#	}
+		#}
+		wonder_harbor = {
+			set_wonder_model = wonder_harbor
+		}
+		wonder_palace = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_palace_of_aachen
+			}
+		}
+		wonder_garden = {
+			set_wonder_model = wonder_tree
+		}
+		wonder_university = {
+			set_wonder_model = wonder_mosque
+		}
+		wonder_mausoleum = {
+			if = {
+				limit = { has_dlc = "Conclave" } # Content Pack
+				set_wonder_model = cote_khajuraho
+			}
+			else = {
+				set_wonder_model = wonder_statue
+			}
+		}
+		wonder_pagan_stones = {
+			if = {
+				limit = { has_dlc = "Holy Fury" }
+				set_wonder_model = gold_mine
+			}
+			else = {
+				set_wonder_model = wonder_tree
+			}
+		}
+		wonder_aztec_pyramid = {
+			set_wonder_model = wonder_pyramid
+		}
+	}
+}

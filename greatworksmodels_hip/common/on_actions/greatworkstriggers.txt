@@ -1,0 +1,19 @@
+on_startup = {
+	effect = {
+		if = {
+			limit = { NOT = { has_global_flag = great_works_models_setup } }
+			set_global_flag = great_works_models_setup
+			any_wonder = {
+				set_great_works_model = yes
+			}
+		}
+	}
+}
+
+on_wonder_stage_finish = {
+	effect = {
+		FROM = {
+			set_great_works_model = yes
+		}
+	}
+}
